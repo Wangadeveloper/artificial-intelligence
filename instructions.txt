@@ -1,1 +1,35 @@
+1. Prerequisites
+Since you are using Google Colab, you don't need to install PyTorch manually, as it comes pre-installed. However, ensure the following libraries are imported in your Colab notebook:
+import torch
+import torchvision
+import numpy as np
+import matplotlib.pyplot as plt
 
+Run each cell in the notebook sequentially to:
+
+Load and preprocess the dataset
+
+Define the CNN model
+
+Train the model
+
+Evaluate the model
+
+Step 4: Adjust Hyperparameters
+Modify the values inside the notebook to test different configurations:
+
+num_filters = 8  
+kernel_size = 5  
+learning_rate = 0.005  
+num_epochs = 10  
+Run the training cell again after making changes.
+
+Select GPU
+
+Modify your code to use GPU:
+
+python
+Copy
+Edit
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+model.to(device)
